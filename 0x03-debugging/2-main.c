@@ -9,13 +9,13 @@
 int main(void)
 {
         	int largest_number(int a, int b, int c);
-
-        a = 972;
-        b = -98;
-        c = 0;
+		
+		int a = 972;
+		int b = -98;
+		int c = 0;
         
-        largest = largest_number(a, b, c);
-        printf("%d is the largest number\n", largest);
-        
-        return (0);
+		int largest = largest_number(a, b, c);
+		printf("%d is the largest number\n", largest);
+		
+		return (0);
 }
