@@ -1,47 +1,30 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * alloc_grid - nested loop to make grid
- * @width: width input
- * @height: height input
- * Return: pointer to 12dim. array
+ * array_range - creates an array of integers.
+ * @min: minimum value.
+ * @max: maximum value.
+ *
+ * Return: pointer to the newly created array.
+ * if man > mix, returns NULL.
+ * if malloc fails, returns NULL.
  */
-
-int **alloc_grid(int width, int height)
+int *array_range(int min, int max)
 {
-	int **mee;
-	int x, y;
+	int *ar;
+	int i;
 
-	if (width <= 0 || height <= 0)
-		return (NULL);
-	mee = malloc(sizeof(int *) * height);
-
-	if (mee == NULL)
-
+	if (min > max)
 		return (NULL);
 
-	for (x = 0; x < height; x++)
+	ar = malloc(sizeof(*ar) * ((max - min) + 1));
 
-	{
-		mee[x] = malloc(sizeof(int) * width);
+	if (ar == NULL)
+		return (NULL);
 
-		if (mee[x] == NULL)
+	for (i = 0; min <= max; i++, min++)
+		ar[i] = min;
 
-		{
-			for (; x >= 0; x--)
-				free(mee[x]);
-
-			free(mee);
-
-			return (NULL);
-		}
-
-	for (x = 0; x < height; x++)
-	{
-		for (y = 0; y < width; y++)
-			mee[x][y] = 0;
-	}
-		return (mee);
+	return (ar);
 }
 
