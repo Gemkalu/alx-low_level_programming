@@ -1,32 +1,32 @@
 #include "main.h"
 
 /**
- * _strcat - Function that links two strings
- * @dest: input
- * @src: input
+ * _strcat - this functions links two strings
+ * @dest: input value
+ * @src: input value
  *
  * Return: void
  */
 char *_strcat(char *dest, char *src)
 {
-	int x;
-	int a;
+	int i;
+	int j;
 
 
-	x = 0;
-	while (dest[x] != '\0')
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		x++;
+		i++;
 	}
-	a = 0;
-	while (src[a] != '\0')
+	j = 0;
+	while (src[j] != '\0')
 	{
-		dest[x] = src[a];
-		x++;
-		a++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
 
 
-	dest[x] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
