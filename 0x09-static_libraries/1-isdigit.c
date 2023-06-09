@@ -1,5 +1,5 @@
 #include "main.h"
-		
+
 /**
  * _isdigit - searchs for a number (0 through 9)
  * @c: number to be checked
